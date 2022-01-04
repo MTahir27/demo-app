@@ -1,5 +1,5 @@
 import react from "react";
-import "./contact-form.css";
+import "./index.css";
 
 function ContactForm() {
   return (
@@ -23,7 +23,7 @@ function ContactForm() {
             />
           </div>
           <div className="col-md-4">
-            <label htmlFor="">Subjectsss</label>
+            <label htmlFor="">Subject</label>
             <input
               type="text"
               className="form-control"

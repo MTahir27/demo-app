@@ -1,7 +1,8 @@
 import react from "react";
-import Navbar from "../navbar/navbar";
-import "./home.css";
-import { ContactForm } from "../contact-form/contact-form";
+import "./index.css";
+// Conponents
+import Navbar from "../../Components/Navbar";
+import { ContactForm } from "../../Components/Contact-form";
 
 function Home() {
   return (

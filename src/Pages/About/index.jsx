@@ -1,8 +1,7 @@
 import react from "react";
-
-import "./about.css";
-
-import Navbar from "../navbar/navbar";
+import "./index.css";
+// Components
+import Navbar from "../../Components/Navbar";
 
 function About() {
   return (
@@ -13,4 +12,4 @@ function About() {
   );
 }
 
-export { About };
+export default About;
