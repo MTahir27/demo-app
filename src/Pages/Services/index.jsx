@@ -41,19 +41,7 @@ function Services() {
       <div className="container">
         <h1>Services Pages</h1>
         <div className="row g-4">
-          <Product servicesParent={services} name="waseem" />
-          {/* <div className="col-md-6 col-lg-4">
-            <Product />
-          </div>
-          <div className="col-md-6 col-lg-4">
-            <Product />
-          </div>
-          <div className="col-md-6 col-lg-4">
-            <Product />
-          </div>
-          <div className="col-md-6 col-lg-4">
-            <Product />
-          </div> */}
+          <Product />
         </div>
       </div>
     </>
