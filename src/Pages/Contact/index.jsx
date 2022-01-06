@@ -8,7 +8,9 @@ function Contact() {
   return (
     <>
       <Navbar />
-      <h1>Contact Page</h1>
+      <div className="container">
+        <h1>Contact Page</h1>
+      </div>
       <ContactForm />
     </>
   );
