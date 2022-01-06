@@ -1,4 +1,4 @@
-import react from "react";
+import react, { useState } from "react";
 import "./index.css";
 // Conponents
 import Navbar from "../../Components/Navbar";
@@ -59,6 +59,8 @@ function Home() {
     },
   ];
 
+  const [Products, setProducts] = useState(initialState);
+
   return (
     <>
       <Navbar />
@@ -76,7 +78,7 @@ function Home() {
         </p>
         <h3>Products</h3>
         <div className="row g-4">
-          <Product />
+          <Product productsParent={Products} />
         </div>
       </div>
       <ContactForm />
