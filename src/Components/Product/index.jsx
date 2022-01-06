@@ -70,7 +70,7 @@ function Product() {
         </div>
         <div className="product-detail">
           <h4 className="name">Product No 1</h4>
-          <p>
+          <p className="description">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo
             inventore quo totam quae itaque eaque iusto officia sit hic quis
             quos aperiam temporibus aliquid consequuntur nemo exercitationem,

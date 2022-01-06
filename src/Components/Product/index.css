@@ -7,7 +7,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  max-height: 220px;
+  max-height: 200px;
 }
 
 .productCard .product-img img {
@@ -36,6 +36,13 @@
 
 .productCard .product-detail .name {
   color: var(--primarycolor);
+}
+
+.productCard .product-detail .description {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
 }
 
 .productCard .product-detail .price {
