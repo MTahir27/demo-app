@@ -12,6 +12,7 @@ function ContactForm() {
               type="text"
               className="form-control"
               placeholder="Enter Name"
+              name="name"
             />
           </div>
           <div className="col-sm-6 col-md-4">
@@ -20,6 +21,7 @@ function ContactForm() {
               type="email"
               className="form-control"
               placeholder="demo@example.com"
+              name="email"
             />
           </div>
           <div className="col-md-4">
@@ -28,20 +30,25 @@ function ContactForm() {
               type="text"
               className="form-control"
               placeholder="Enter Subject"
+              name="subject"
             />
           </div>
           <div className="col-12">
             <label htmlFor="">Message</label>
             <textarea
-              name=""
-              id=""
+              name="message"
               className="form-control"
               rows="5"
               placeholder="Write Message Here"
             ></textarea>
           </div>
           <div className="col-12 text-start">
-            <input type="submit" value={"Submit"} className="btn btn-primary" />
+            <input
+              type="submit"
+              value={"Submit"}
+              className="btn btn-primary"
+              name="submit"
+            />
           </div>
         </div>
       </form>
