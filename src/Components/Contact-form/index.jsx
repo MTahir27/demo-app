@@ -1,4 +1,4 @@
-import react from "react";
+import react, { useState } from "react";
 import "./index.css";
 
 function ContactForm() {
@@ -12,7 +12,7 @@ function ContactForm() {
               type="text"
               className="form-control"
               placeholder="Enter Name"
-              name="name"
+              name="fullName"
             />
           </div>
           <div className="col-sm-6 col-md-4">

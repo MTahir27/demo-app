@@ -3,9 +3,7 @@ import "./index.css";
 
 // Products Array
 function Product(props) {
-  useEffect(() => {
-    console.log("useEffect");
-  }, [props.productsParent]);
+  useEffect(() => {}, [props.productsParent]);
   return (
     <>
       {props.productsParent.map((Product, Index) => {
