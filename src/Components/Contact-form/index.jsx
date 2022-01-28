@@ -2,16 +2,25 @@ import react, { useState } from "react";
 import "./index.css";
 
 function ContactForm() {
-  const [user, setUser] = useState({});
+  const [form, setForm] = useState({});
   const [hide, setHide] = useState(false);
 
-  const handleChange = (e) => {
-    setUser({ [e.target.name]: e.target.value });
+  // const handleChange = (e) => {
+  //   setUser({ [e.target.name]: e.target.value });
+  // };
+
+  // const handleSubmit = (e) => {
+  //   console.log(user);
+  // };
+
+  const handelChange = (e) => {
+    // console.log(e.target.name + " : " + e.target.value);
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    console.log(user);
-  };
+  function submitForm() {
+    console.log(form);
+  }
 
   const hideShow = () => {
     if (hide == false) {
@@ -45,6 +54,7 @@ function ContactForm() {
               className="form-control"
               placeholder="Enter Name"
               name="fullName"
+              onChange={handelChange}
             />
           </div>
           <div className="col-sm-6 col-md-4">
@@ -54,6 +64,7 @@ function ContactForm() {
               className="form-control"
               placeholder="demo@example.com"
               name="email"
+              onChange={handelChange}
             />
           </div>
           <div className="col-md-4">
@@ -63,6 +74,7 @@ function ContactForm() {
               className="form-control"
               placeholder="Enter Subject"
               name="subject"
+              onChange={handelChange}
             />
           </div>
           <div className="col-12">
@@ -72,6 +84,7 @@ function ContactForm() {
               className="form-control"
               rows="5"
               placeholder="Write Message Here"
+              onChange={handelChange}
             ></textarea>
           </div>
           <div className="col-12 text-start">
@@ -79,7 +92,7 @@ function ContactForm() {
               type="submit"
               value={"Submit"}
               className="btn btn-primary"
-              onClick={handleSubmit}
+              onClick={submitForm}
             />
           </div>
         </div>
