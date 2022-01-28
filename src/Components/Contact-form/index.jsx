@@ -2,9 +2,18 @@ import react, { useState } from "react";
 import "./index.css";
 
 function ContactForm() {
-  return (
+  const [form, setForm] = useState({});
+
+  function handleChange(e) {
+    setForm({...form, [e.target.name]: e.target.value})
+  }
+
+  function submitForm() {
+    console.log(form);
+  }
+    return (
     <div className="container">
-      <form action="" className="contactForm">
+      <div className="contactForm">
         <div className="row g-4">
           <div className="col-sm-6 col-md-4">
             <label htmlFor="">Name</label>
@@ -13,6 +22,7 @@ function ContactForm() {
               className="form-control"
               placeholder="Enter Name"
               name="fullName"
+              onChange={handleChange}
             />
           </div>
           <div className="col-sm-6 col-md-4">
@@ -22,6 +32,7 @@ function ContactForm() {
               className="form-control"
               placeholder="demo@example.com"
               name="email"
+              onChange={handleChange}
             />
           </div>
           <div className="col-md-4">
@@ -31,6 +42,7 @@ function ContactForm() {
               className="form-control"
               placeholder="Enter Subject"
               name="subject"
+              onChange={handleChange}
             />
           </div>
           <div className="col-12">
@@ -40,6 +52,7 @@ function ContactForm() {
               className="form-control"
               rows="5"
               placeholder="Write Message Here"
+              onChange={handleChange}
             ></textarea>
           </div>
           <div className="col-12 text-start">
@@ -48,10 +61,11 @@ function ContactForm() {
               value={"Submit"}
               className="btn btn-primary"
               name="submit"
+              onClick={submitForm}
             />
           </div>
         </div>
-      </form>
+      </div>
     </div>
   );
 }
