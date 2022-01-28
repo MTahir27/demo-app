@@ -2,9 +2,41 @@ import react, { useState } from "react";
 import "./index.css";
 
 function ContactForm() {
+  const [user, setUser] = useState({});
+  const [hide, setHide] = useState(false);
+
+  const handleChange = (e) => {
+    setUser({ [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    console.log(user);
+  };
+
+  const hideShow = () => {
+    if (hide == false) {
+      setHide(true);
+    } else {
+      setHide(false);
+    }
+  };
+
   return (
     <div className="container">
-      <form action="" className="contactForm">
+      <section className="my-5">
+        {hide && (
+          <div className="border p-3 mb-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo soluta
+            quasi quod ratione fugit hic voluptas aspernatur deleniti esse harum
+            nulla odit eos fugiat, et modi! Voluptatem inventore excepturi
+            ipsam!
+          </div>
+        )}
+        <button className="btn" onClick={hideShow}>
+          Hide Show
+        </button>
+      </section>
+      <div className="contactForm">
         <div className="row g-4">
           <div className="col-sm-6 col-md-4">
             <label htmlFor="">Name</label>
@@ -47,11 +79,11 @@ function ContactForm() {
               type="submit"
               value={"Submit"}
               className="btn btn-primary"
-              name="submit"
+              onClick={handleSubmit}
             />
           </div>
         </div>
-      </form>
+      </div>
     </div>
   );
 }
