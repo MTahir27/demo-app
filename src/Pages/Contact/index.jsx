@@ -2,7 +2,7 @@ import react from "react";
 import "./index.css";
 // Components
 import Navbar from "../../Components/Navbar";
-import { ContactForm } from "../../Components/Contact-form";
+import ContactForm2 from "../../Components/Contact-Form-2";
 
 function Contact() {
   return (
@@ -10,8 +10,8 @@ function Contact() {
       <Navbar />
       <div className="container">
         <h1>Contact Page</h1>
+        <ContactForm2 />
       </div>
-      <ContactForm />
     </>
   );
 }

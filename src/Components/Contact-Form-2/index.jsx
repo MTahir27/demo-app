@@ -13,7 +13,6 @@ function ContactForm2() {
             className="form-control"
             placeholder="Enter Name"
             name="fullName"
-            onChange={handleChange}
           />
         </div>
         <div className="col-sm-6 col-md-4">
@@ -23,7 +22,6 @@ function ContactForm2() {
             className="form-control"
             placeholder="demo@example.com"
             name="email"
-            onChange={handleChange}
           />
         </div>
         <div className="col-md-4">
@@ -33,7 +31,6 @@ function ContactForm2() {
             className="form-control"
             placeholder="Enter Subject"
             name="subject"
-            onChange={handleChange}
           />
         </div>
         <div className="col-12">
@@ -43,7 +40,6 @@ function ContactForm2() {
             className="form-control"
             rows="5"
             placeholder="Write Message Here"
-            onChange={handleChange}
           ></textarea>
         </div>
         <div className="col-12 text-start">
@@ -52,7 +48,6 @@ function ContactForm2() {
             value={"Submit"}
             className="btn btn-primary"
             name="submit"
-            onClick={submitForm}
           />
         </div>
       </div>
