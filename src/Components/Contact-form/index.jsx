@@ -5,13 +5,13 @@ function ContactForm() {
   const [form, setForm] = useState({});
 
   function handleChange(e) {
-    setForm({...form, [e.target.name]: e.target.value})
+    setForm({ ...form, [e.target.name]: e.target.value })
   }
 
   function submitForm() {
     console.log(form);
   }
-    return (
+  return (
     <div className="container">
       <div className="contactForm">
         <div className="row g-4">
