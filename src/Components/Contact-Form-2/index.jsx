@@ -2,6 +2,7 @@ import React from 'react';
 import "./index.css";
 
 function ContactForm2() {
+    
   return (
     <div className="container">
     <div className="contactForm">
